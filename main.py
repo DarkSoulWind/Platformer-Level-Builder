@@ -88,8 +88,8 @@ def make_grid():
         with open(FILENAME, 'r') as file:
             file_reader = csv.reader(file)
             parsed = [row for row in file_reader]
-            grid = [[Tile(i, j, value=int(parsed[i][j])) for j in range(WIDTH//TILESIZE)]
-                    for i in range(HEIGHT//TILESIZE)]
+            grid = [[Tile(i, j, value=int(parsed[i][j])) for j in range((WIDTH)//TILESIZE)]
+                    for i in range((HEIGHT)//TILESIZE)]
     except FileNotFoundError:
         print(f'File {FILENAME} not found.')
         status_message = f'Error: File not found.'
